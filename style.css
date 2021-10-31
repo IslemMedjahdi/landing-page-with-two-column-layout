@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    cursor: pointer;
+    padding-top: 2rem;
+    margin-left: 3rem;
+}
+header nav ul{
+    list-style: none;
+    padding-top: 2rem;
+}
+header nav ul li{
+    display: inline;
+    margin-right: 3rem;
+}
+header nav ul li a{
+    color: hsl(238, 22%, 44%);
+    text-decoration: none;
+    position: relative;
+}
+header nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 0.2rem;
+    background-color: hsl(224, 93%, 58%);
+    position: absolute;
+    border-radius: 1rem;
+    bottom: -0.3rem;
+    left: 50%;
+    transition: 0.4s;
+}
+header nav ul li a:hover::after{
+    width: 100%;
+    left: 0;
+}
+main{
+    margin-top: 2rem;
+}
+.section{
+    padding: 0 3rem;
+    display: grid;  
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+.section .left,.section .right{
+    display: flex;
+    flex-direction: column;
+}
+.left h1{
+    font-family: 'Raleway',sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: hsl(243, 87%, 12%);
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+.left p{
+    color: hsl(243, 87%, 12%);
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+form {
+    display: flex;
+    position: relative;
+}
+.left form input{
+    min-width: 20rem;
+    margin-right: 2rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgb(65, 65, 65);
+    outline: none;
+}
+.left form input:focus{
+    border-color: hsla(224, 93%, 58%, 0.6);
+}
+.left form input:invalid{
+    border-color: #CD5C5C;
+}
+.left form input:invalid + span::after{
+    content: "Please check your email";
+    color: #CD5C5C;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    font-size: 0.7em;
+}
+.section .left form button{
+    width: 10rem;
+    padding: 0.9rem 1.5rem;
+    margin-top: 0.5rem;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.3rem;
+    background-color: hsl(224, 93%, 58%);
+    box-shadow: 0px 3px 7px rgb(10 10 10 / 55%);
+}
+.section .left form button:hover{
+    background-color: hsl(224, 100%, 62%);
+}
+.right img{
+    width: 90% ;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+.two::before{
+    content: url(images/bg-curve-desktop.svg);
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    top: -6rem;
+    z-index: -1;
+}
+.two{
+    position: relative;
+    background-color: rgb(248,248,254);
+    padding-bottom: 7rem;
+    margin-bottom: 0;
+}
+.two a{
+    color:  hsl(170, 45%, 43%);
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+.two a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 0.1rem;
+    background-color: hsl(170, 45%, 43%);
+}
+.two a:hover{
+    color: hsl(170, 31%, 60%);
+}
+.two a:hover::before{
+    background-color: hsl(170, 31%, 60%);
+}
+.card{
+    background-color: white;
+    width: 70%;
+    padding: 2rem;
+    box-shadow: 0px 3px 7px rgb(10 10 10 / 55%);
+    margin-top: 3rem;
+}
+.card p{
+    font-size: 1em;
+}
+.card .user{
+    display: flex;
+}
+.card .user img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    pointer-events: none;
+    user-select: none;
+}
+.card .user .name{
+    color: hsl(243, 87%, 12%);
+    font-size: 0.95em;
+}
+.three{
+    background-color: hsl(238, 22%, 44%);
+    padding: 4rem 3rem;
+    margin-bottom: 0;
+}
+.three .left h1{
+    color: white;
+}
+.three .left p{
+    color: white;
+}
+.three .right form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 7rem;
+} 
+.three .right input{
+    width: 75%;
+    border: 1px solid rgb(65, 65, 65);
+    min-width: 15rem;
+    margin-right: 2rem;
+    padding: 0.7rem;
+    outline: none;
+}
+.three .right form input:focus{
+    border-color: hsla(224, 93%, 58%, 0.6);
+
+}
+.three .right form input:invalid{
+    border-color: #CD5C5C;
+
+}
+.three .right form input:invalid + span::after{
+    content: " Please check your email";
+    color: #CD5C5C;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    font-size: 0.7em;
+}
+.three .right form button{
+    min-width: 10rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.3rem;
+    background-color: hsl(224, 93%, 58%);
+    box-shadow: 0px 3px 7px rgb(10 10 10 / 55%);
+}
+.three .right form button:hover{
+    background-color: hsl(224, 100%, 62%);
+}
+footer{
+    background-color: hsl(243, 87%, 12%);
+    padding: 4rem 3rem 2rem;
+}
+footer .logo{
+    width: 10rem;
+    filter:  brightness(0) invert(1);
+    margin-bottom: 2rem;
+}
+footer .footer{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .contact .contact-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.footer>*{
+    margin-bottom: 3rem;
+}
+.footer .contact .contact-info img{
+    margin-right: 1rem;
+}
+.footer .contact .contact-info p{
+    color: #fff;
+}
+.footer .links ul{
+    list-style: none;
+}
+.footer .links ul li{
+    margin-bottom: 0.5rem;
+}
+.footer .links ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.footer .links ul li a:hover{
+    color: hsl(238, 22%, 44%);
+}
+/* ------ MEDIA QUERIES --------- */
+@media only screen and (max-width: 1024px) {
+        .left form{
+            flex-direction: column;
+        }
+}
+@media only screen and (max-width: 720px) {
+    .section{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+    }
+    .logo img{
+        width: 90%;
+    }
+    .section .right{
+        order: -1;
+    }
+    .three .right{
+        order: 1 !important;
+    }
+    .section .right,.section .left{
+        align-items: center;
+    }
+    .left>h1,.left>p{
+        text-align: center;
+    }
+    .section .left form button{
+        width: 25rem;
+        min-width: 10rem;
+    }
+    .left form input{
+        margin-right: initial;
+    }
+    .three .right form{
+        margin-left: 0rem;
+        align-items: center;
+    } 
+    .three .right input{
+        width: 75%;
+        min-width: 20rem;
+        margin-right: 0rem;
+        padding: 0.7rem;
+    }
+    .three .right form button{
+        min-width: 20rem;
+        padding: 0.7rem;
+    }
+    footer .footer{
+        flex-direction: column;
+    }
+    .left form input:invalid + span::after{
+        content: "Please check your email";
+        color: #CD5C5C;
+        position: absolute;
+        top: 7rem;
+        left: 0;
+        font-size: 0.7em;
+    }
+    .card{
+        width: 90%;
+    }
+}
